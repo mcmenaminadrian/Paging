@@ -46,22 +46,22 @@ label.lft("Page table", rpta.w);
 
 drawarrow rtw.w{down} .. rptb.s;
 drawarrow rptb.n .. four.s;
-fill bpath rtw withcolor green;
-fill bpath four withcolor green;
+fill bpath rtw withcolor red;
+fill bpath four withcolor red;
 draw pic(rtw) withcolor white;
 draw pic(four) withcolor white;
 
 drawarrow rsv.w{down} .. rptg.s;
 drawarrow rptg.n .. eight.s;
-fill bpath rsv withcolor green;
-fill bpath eight withcolor green;
+fill bpath rsv withcolor red;
+fill bpath eight withcolor red;
 draw pic(rsv) withcolor white;
 draw pic(eight) withcolor white;
 
 drawarrow rtr.w{down} .. rptc.s;
 drawarrow rptc.n .. two.s;
-fill bpath rtr withcolor green;
-fill bpath two withcolor green;
+fill bpath rtr withcolor red;
+fill bpath two withcolor red;
 draw pic(rtr) withcolor white;
 draw pic(two) withcolor white;
 
