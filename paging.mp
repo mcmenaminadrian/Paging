@@ -7,7 +7,7 @@ boxjoin(a.sw=b.nw);
 boxit.on("1"); boxit.tw("2"); boxit.tr("3"); boxit.fr("4");
 boxit.fv("5"); boxit.sx("6"); boxit.sv("7"); boxit.ei("8");
 drawboxed(on,tw,tr,fr,fv,sx,sv,ei);
-label.lft("Application 1:", tr.w) withcolor blue;
+label.bot(btex Application Pages etex, ei.s) withcolor blue;
 
 %page frames
 boxjoin(a.ne=b.nw);
@@ -16,7 +16,7 @@ boxit.five("0x05"); boxit.six("0x06"); boxit.seven("0x07"); boxit.eight("0x08");
 boxit.nine("0x09"); boxit.ten("0x0a");
 on.c - one.c = (-100, 50);
 drawboxed(one,two,three,four,five,six,seven,eight, nine, ten); 
-label.bot("System page frames", three.s) withcolor red;
+label.bot(btex System Page Frames etex, two.e + (0, -15)) withcolor green;
 
 %app1 page table
 boxjoin(a.sw = b.nw);
@@ -26,7 +26,7 @@ boxit.pta(); boxit.ptb(); boxit.ptc(); boxit.ptd();
 boxit.pte(); boxit.ptf(); boxit.ptg(); boxit.pth();
 on.c - pta.c = (-40, 0);
 drawboxed(pta, ptb, ptc, ptd, pte, ptf, ptg, pth);
-label.bot("Page Table", pth.s);
+label.bot(btex Page Table etex, pth.e + (10, -10));
 
 %application 2 pages
 boxjoin(a.sw=b.nw);
@@ -34,7 +34,7 @@ boxit.ron("1"); boxit.rtw("2"); boxit.rtr("3"); boxit.rfr("4");
 boxit.rfv("5"); boxit.rsx("6"); boxit.rsv("7");
 ron.nw - pth.nw = (350, -50);
 drawboxed(ron, rtw,rtr, rfr, rfv, rsx, rsv);
-label.bot("Application 2", rsv.s) withcolor green;
+label.llft(btex Application Pages etex, rsv.s) withcolor red;
 
 %application 2 page table
 boxjoin(a.ne = b.nw)
@@ -42,24 +42,24 @@ boxit.rpta(); boxit.rptb(); boxit.rptc(); boxit.rptd();
 boxit.rpte(); boxit.rptf(); boxit.rptg();
 ron.ne - rpta.ne = (125, -10);
 drawboxed(rpta, rptb, rptc, rptd, rpte, rptf, rptg);
-label.lft("Page table", rpta.w);
+label.lft(btex Page Table etex, rpta.w);
 
-drawarrow rtw.w{down} .. rptb.s;
-drawarrow rptb.n .. four.s;
+drawarrow rtw.w{dir 120} .. {dir 75}rptb.s;
+drawarrow rptb.n{dir 145} .. {dir 110}four.s;
 fill bpath rtw withcolor red;
 fill bpath four withcolor red;
 draw pic(rtw) withcolor white;
 draw pic(four) withcolor white;
 
-drawarrow rsv.w{down} .. rptg.s;
-drawarrow rptg.n .. eight.s;
+drawarrow rsv.w{dir 150} .. {dir 110}rptg.s;
+drawarrow rptg.n{dir 75} .. {dir 120}eight.s;
 fill bpath rsv withcolor red;
 fill bpath eight withcolor red;
 draw pic(rsv) withcolor white;
 draw pic(eight) withcolor white;
 
-drawarrow rtr.w{down} .. rptc.s;
-drawarrow rptc.n .. two.s;
+drawarrow rtr.w{dir 100} .. {dir 110}rptc.s;
+drawarrow rptc.n{dir 120} .. {dir 100}two.s;
 fill bpath rtr withcolor red;
 fill bpath two withcolor red;
 draw pic(rtr) withcolor white;
