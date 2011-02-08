@@ -1,4 +1,5 @@
 METAPOST command files to draw various aspects of Linux/Unix memory management
 
+pagetables.mp	Linux page table indirection
 memmap.mp	Virtual and physical memory ampping
 paging.mp	Simplified version of paging
