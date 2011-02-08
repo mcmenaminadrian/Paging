@@ -4,7 +4,7 @@ prologues:=3;
 
 %some colours
 color lightgrey;
-lightgrey:=(4/5, 4/5. 4/5);
+lightgrey:=(4/5, 4/5, 4/5);
 color midgrey;
 midgrey:=(3/5, 3/5, 3/5);
 color darkgrey;
@@ -19,8 +19,13 @@ boxit.pud(btex PUD index  etex);
 boxit.pmd(btex PMD index  etex);
 boxit.tab(btex PAGE index etex);
 boxit.off(btex OFFSET     etex);
+pgd.w - pud.w = (-100, 0);
+pud.w - pmd.w = (-100, 0);
+pmd.w - tab.w = (-100, 0);
+tab.w - off.w = (-100, 0);
+tab.e - off.e = (-100, 0);
 
-pgd.dx=20bp;
+
 pgd.dy=10bp;
 drawboxed(pgd, pud, pmd, tab, off);
 fill bpath pgd withcolor gloom;
