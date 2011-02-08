@@ -1,1 +1,4 @@
-This should draw, in METAPOST, a simplified diagramme of demand paging
+METAPOST command files to draw various aspects of Linux/Unix memory management
+
+memmap.mp	Virtual and physical memory ampping
+paging.mp	Simplified version of paging
