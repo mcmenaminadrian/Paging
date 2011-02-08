@@ -38,4 +38,7 @@ draw pic(pud) withcolor white;
 draw pic(pmd) withcolor white;
 draw pic(tab) withcolor white;
 
+
+label.top(btex linear address etex, pmd.n) withcolor red;
+
 endfig;
