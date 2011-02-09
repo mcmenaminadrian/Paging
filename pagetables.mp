@@ -38,7 +38,17 @@ draw pic(pud) withcolor white;
 draw pic(pmd) withcolor white;
 draw pic(tab) withcolor white;
 
+label.ulft(btex0etex, off.ne);
+label.urt(btex11etex, off.nw);
+label.ulft(btex12etex, tab.ne);
+label.urt(btex20etex, tab.nw);
+label.ulft(btex21etex, pmd.ne);
+label.urt(btex29etex, pmd.nw);
+label.ulft(btex30etex, pud.ne);
+label.urt(btex38etex, pud.nw);
+label.ulft(btex39etex, pgd.ne);
+label.urt(btex47etex, pgd.nw);
 
-label.top(btex linear address etex, pmd.n) withcolor red;
+label.bot(btex linear address etex, pmd.s) withcolor red;
 
 endfig;
