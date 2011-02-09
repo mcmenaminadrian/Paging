@@ -110,29 +110,30 @@ drawarrow ptd.s{dir 270} .. {dir 0}tb.w withcolor red;
 
 boxjoin();
 circleit.plus(btex + etex);
-offset.s - plus.n = (0, -30);
-plus.dx = 20bp;
-plus.dy = 20bp;
+off.s - plus.n = (0, 40);
+plus.dx = 5bp;
+plus.dy = 5bp;
 drawboxed(plus);
 fill bpath plus withcolor black;
 draw pic(plus) withcolor white;
 
-drawarrow offset.s -- plus.n withcolor red;
+drawarrow off.s -- plus.n withcolor red;
 
 boxjoin();
-boxjoin(a.sw=b.nw; a.se=b.se)
-boxit.lina(btex $\texttt{0x001}$ etex);
-boxit.linb(btex $\texttt{0x004)$ etex);
-boxit.linc(btex $\texttt{0x008}$ etex);
-boxit.lind(btex $\texttt{0x00A}$ etex);
+boxjoin(a.sw=b.nw; a.se=b.ne)
+boxit.lina(btex 0xFFC etex);
+boxit.linb(btex 0xFF8 etex);
+boxit.linc(btex 0xFF4 etex);
+boxit.lind(btex 0xFF0 etex);
 boxit.line(btex $\vdots$ etex);
-boxit.linf(btex $\texttt{0xFFC}$ etex);
+boxit.linf(btex 0x001 etex);
 lina.dx=10bp;
 
-linc.w - plus.e = (20, 0);
-drawboxed(lina, linb, linc, lind, line, linf); 
+linc.w - plus.e = (50, 0);
+drawboxed(lina, linb, linc, lind, line, linf);
+label.bot(btex page frame etex, linf.s);
 
-drawarrow tb.w{dir 45} .. {dir 15}linf.sw;
+drawarrow tb.e{dir 15} .. {dir 15}linf.sw;
 drawarrow plus.e -- linc.w withcolor red;
 
 endfig;
