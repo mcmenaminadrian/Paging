@@ -17,7 +17,7 @@ boxjoin(a.ne=b.nw; a.se=b.sw);
 boxit.pgd(btex PGD index  etex);
 boxit.pud(btex PUD index  etex);
 boxit.pmd(btex PMD index  etex);
-boxit.ptd(btex PTE index etex);
+boxit.ptd(btex TABLE etex);
 boxit.off(btex OFFSET     etex);
 pgd.w - pud.w = (-100, 0);
 pud.w - pmd.w = (-100, 0);
