@@ -37,7 +37,7 @@ f := fullcircle scaled(100);
 fill f withcolor lightgrey;
 draw f;
 label(btex FREE etex, (0, 0));
-label (btex lru\_cache\_add\_lru etex, (150, -100));
+label (btex lru\_cache\_add\_lru etex, (50, -100));
 label (btex lru\_cache\_add\_lru etex, (-150, -100)); 
 
 au := fullcircle scaled 100 shifted(-200, -200);
@@ -77,15 +77,17 @@ drawarrow(0, 0) .. (-200, -200) cutbefore f cutafter au;
 drawarrow(0, 0) .. (200, -200) cutbefore f cutafter iu;
 
 %between inactive ref and active unref
-drawarrow(200, -390){dir 180} .. {dir 180}(-200, -190) cutbefore ir cutafter au;
-drawarrow(-200, -210){dir 0} .. {dir 0}(200, -410) cutbefore au cutafter ir;
-label(btex shrink\_active\_list etex, (0, -342));
+drawarrow(200, -400) .. (-200, -200) cutbefore ir cutafter au;
 
-%arrows inactiveref to free and dirty
-drawarrow(200, -400) .. (400, -400) cutbefore ir cutafter d;
-drawarrow(200, -400){dir 45} .. (0, 0) cutbefore ir cutafter f;
-label(btex shrink\_inactive\_list etex, (300, -420));
-label(btex shrink\_inactive\_list etex, (290, -340));
+%between active unref and inactive unref
+drawarrow(-200, -200) .. (200, -200) cutbefore au cutafter iu;
+label(btex shrink\_active\_list etex, (0, -210));
+
+%arrows inactiveunref to free and dirty
+drawarrow(200, -200) .. (400, -400) cutbefore iu cutafter d;
+drawarrow(200, -200){dir 45} .. {dir 180}(0, 0) cutbefore iu cutafter f;
+label(btex shrink\_inactive\_list etex, (300, -240));
+label(btex shrink\_inactive\_list etex, (290, -140));
 
 %dirty to clean, clean to free
 drawarrow(400, -400) .. (400, -200) cutbefore d cutafter c; 
@@ -94,12 +96,18 @@ label(btex pageout etex, (420, -300));
 label(btex pageout etex, (410, -140));
 
 %active ref loop
-drawarrow(-200, -420){dir 200} ..(-350, -400) .. {dir 340}(-200, -380) cutbefore ar cutafter ar;
+drawarrow(-200, -400){dir 120} .. {dir 0}(-200, -200) cutbefore ar cutafter au;
 label(btex shrink\_active\_list etex, (-270, -350));
 
 %mark_page_accessed labels
 label(btex mark\_page\_accessed etex, (70, -300));
 label(btex mark\_page\_accessed etex, (-150, -300));
 label(btex mark\_page\_accessed etex, (150, -260));
+
+%page refed between ir and iu
+drawarrow(200, -400){dir 60} .. (200, - 200) cutbefore ir cutafter iu;
+label(btex page\_referenced etex, (260, -330));
+
+%page
 
 endfig;
