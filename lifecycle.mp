@@ -37,8 +37,8 @@ f := fullcircle scaled(100);
 fill f withcolor lightgrey;
 draw f;
 label(btex FREE etex, (0, 0));
-label (btex lru\_cache\_add$\ldots$ etex, (140, -100));
-label (btex lru\_cache\_add$\ldots$ etex, (-140, -100)); 
+label (btex lru\_cache\_add\_lru etex, (150, -100));
+label (btex lru\_cache\_add\_lru etex, (-150, -100)); 
 
 au := fullcircle scaled 100 shifted(-200, -200);
 fill au withcolor baby;
@@ -79,15 +79,27 @@ drawarrow(0, 0) .. (200, -200) cutbefore f cutafter iu;
 %between inactive ref and active unref
 drawarrow(200, -390){dir 180} .. {dir 180}(-200, -190) cutbefore ir cutafter au;
 drawarrow(-200, -210){dir 0} .. {dir 0}(200, -410) cutbefore au cutafter ir;
+label(btex shrink\_active\_list etex, (0, -342));
 
 %arrows inactiveref to free and dirty
 drawarrow(200, -400) .. (400, -400) cutbefore ir cutafter d;
 drawarrow(200, -400){dir 45} .. (0, 0) cutbefore ir cutafter f;
+label(btex shrink\_inactive\_list etex, (300, -420));
+label(btex shrink\_inactive\_list etex, (290, -340));
 
 %dirty to clean, clean to free
 drawarrow(400, -400) .. (400, -200) cutbefore d cutafter c; 
 drawarrow(400, -200){dir 95} .. {dir 220}(0, 0) cutbefore c cutafter f;
+label(btex pageout etex, (420, -300));
+label(btex pageout etex, (410, -140));
 
 %active ref loop
 drawarrow(-200, -420){dir 200} ..(-350, -400) .. {dir 340}(-200, -380) cutbefore ar cutafter ar;
+label(btex shrink\_active\_list etex, (-270, -350));
+
+%mark_page_accessed labels
+label(btex mark\_page\_accessed etex, (70, -300));
+label(btex mark\_page\_accessed etex, (-150, -300));
+label(btex mark\_page\_accessed etex, (150, -260));
+
 endfig;
