@@ -47,7 +47,8 @@ drawarrow(-200, -250) .. (-200, -350);
 ar := fullcircle scaled 100 shifted(-200, -400);
 fill ar withcolor azure;
 draw ar;
-label(btex ACTIVE REF etex, (-200, -400)); 
+label(btex ACTIVE REF etex, (-200, -400));
+drawarrow(-255, -420){dir 225} .. (-350, -400) .. {dir 330}(-255, -380); 
 
 iu := fullcircle scaled 100 shifted(200, -200);
 fill iu withcolor lavender;
@@ -61,16 +62,20 @@ draw ir;
 label(btex INACTIVE REF etex, (200, -400));
 drawarrow(150, -380){dir 180} .. {dir 180}(-150, -180);
 drawarrow(-150, -220){dir 0} .. {dir 0}(150, -420);
+drawarrow(255, -420){dir 340} .. {dir 340}(300, -460);
+drawarrow(255, -380){dir 20} ..(320, -200) .. (60, -10);
 
 d := fullcircle scaled 100 shifted(350, -450);
 fill d withcolor darkgrey;
 draw d;
 label(btex DIRTY etex, (350, -450));
+drawarrow(405, -440) .. (460, -340);
 
 c := fullcircle scaled 100 shifted(500, -300);
 fill c withcolor midgrey;
 draw c;
 label(btex CLEAN etex, (500, -300));
+drawarrow(500, -240) .. {dir 220}(60, 0);
 
 
 endfig;
