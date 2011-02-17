@@ -1,5 +1,6 @@
 METAPOST command files to draw various aspects of Linux/Unix memory management
 
+lifecycle.mp	Life cycle of a page in the Linux VM
 pagetables.mp	Linux page table indirection
-memmap.mp	Virtual and physical memory ampping
+memmap.mp	Virtual and physical memory mapping
 paging.mp	Simplified version of paging
