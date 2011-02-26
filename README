@@ -1,5 +1,6 @@
 METAPOST command files to draw various aspects of Linux/Unix memory management
 
+stack-beta.mp	Pages from second set inside LRU-like stack
 stack-alpha.mp	LRU list as a simple stack
 lifecycle.mp	Life cycle of a page in the Linux VM
 pagetables.mp	Linux page table indirection
