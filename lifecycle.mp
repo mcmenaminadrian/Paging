@@ -96,17 +96,19 @@ label(btex pageout etex, (420, -300));
 label(btex pageout etex, (410, -140));
 
 %active ref loop
-drawarrow(-200, -400){dir 120} .. {dir 0}(-200, -200) cutbefore ar cutafter au;
-label(btex shrink\_active\_list etex, (-270, -350));
+drawarrow(-200, -400){dir 120} .. {dir 40}(-200, -200) cutbefore ar cutafter au;
+label(btex shrink\_active\_list etex, (-280, -300));
+drawarrow(-200, -400) .. (-300, -400) .. (-200, -400) cutbefore ar cutafter ar;
 
 %mark_page_accessed labels
 label(btex mark\_page\_accessed etex, (70, -300));
 label(btex mark\_page\_accessed etex, (-150, -300));
 label(btex mark\_page\_accessed etex, (150, -260));
+label(btex mark\_page\_accessed etex, (-275, -345));
 
 %page refed between ir and iu
 drawarrow(200, -400){dir 60} .. (200, - 200) cutbefore ir cutafter iu;
-label(btex page\_referenced etex, (260, -330));
+label(btex shrink\_inactive\_list etex, (260, -330));
 
 %page
 
