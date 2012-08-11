@@ -1,4 +1,4 @@
-METAPOST command files to draw various aspects of Linux/Unix memory management
+METAPOST command files to illustrate various concepts in computer science
 
 stack-beta.mp	Pages from second set inside LRU-like stack
 stack-alpha.mp	LRU list as a simple stack
@@ -6,3 +6,11 @@ lifecycle.mp	Life cycle of a page in the Linux VM
 pagetables.mp	Linux page table indirection
 memmap.mp	Virtual and physical memory mapping
 paging.mp	Simplified version of paging
+
+change.mp	diagram from MSc project report
+patch.mp	diagram from MSc project report
+patch2.mp
+patch3.mp
+
+trellis.mp	Markov chain like probabilities
+wheels.mp	Artistole's wheel paradox
