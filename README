@@ -1,4 +1,6 @@
 METAPOST command files to illustrate various concepts in computer science
+Licensed for reuse under GPL v3
+Copyright Adrian McMenamin 2011 - 2012
 
 stack-beta.mp	Pages from second set inside LRU-like stack
 stack-alpha.mp	LRU list as a simple stack
@@ -14,3 +16,8 @@ patch3.mp
 
 trellis.mp	Markov chain like probabilities
 wheels.mp	Artistole's wheel paradox
+
+fsb.mp		Simplified version of SMP computer
+spiro.mp	Maths of the spirograph
+
+tilera.mp	NUMA-like memory management in Tilera system
