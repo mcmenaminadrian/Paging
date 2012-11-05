@@ -21,3 +21,11 @@ fsb.mp		Simplified version of SMP computer
 spiro.mp	Maths of the spirograph
 
 tilera.mp	NUMA-like memory management in Tilera system
+
+mosix.mp	RPC calls in MOSIX v1
+newmosix.mp	RPC calls in MOSIX v3
+
+hardvirt.mp	Hardware virtualisation
+kernvirt.mp	OS virtualisation
+
+mypreamble.tex	Preamble to get textpath to work
