@@ -29,7 +29,7 @@ color turquoise;
 turquoise=(0, 191/255, 1);
 
 
-label.lrt(btex Ripple constants and file structure etex, (50,-550));
+label.lrt(btex Ripple fundamental parallelism etex, (50,-550));
 
 boxit.file(btex FILE etex);
 boxit.block(btex BLOCK etex);
